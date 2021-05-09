@@ -1,0 +1,170 @@
+﻿body{												
+	background-color: #1C1C1C;   /*cor de fundo da pagina*/
+}
+a {                                            
+	text-decoration: none; /*tirar azul dos links*/	
+	font-size:15px;
+}
+
+ /*configuração tamanhos dos titulos*/
+
+h1{                    
+	font-size:3.5em;
+}
+
+h2{                    
+	font-size:2.5em;
+}
+
+input, p{               
+	font-size:15px;
+}
+
+ /*configuração caixa do cadastro/usuario*/
+
+#fieldset{                       
+	
+	background-color:#363636;
+	width: 100%;
+	border: 2px #363636 solid;
+	border-radius: 5px;
+	text-align:center;
+	margin-top: 50px;
+		
+}
+
+ /*configuração caixa nome*/
+
+input[type=text] {              
+  width: 80%;
+  background-color: #1C1C1C;
+  color: white;
+  padding: 14px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ /*configuração caixa email*/
+
+input[type=email] {               
+  width: 80%;
+  background-color: #1C1C1C;
+  color: white;
+  padding: 14px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ /*configuração caixa senha*/
+
+input[type=password] {                
+  width: 80%;
+  background-color: #1C1C1C;
+  color: white;
+  padding: 14px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ /*configuração botão entrar*/
+
+input[type=submit] {                
+  width: 79%;
+  background-color: #6959CD;
+  color: #C0C0C0;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  
+  /*define uma borda arredondada de acordo com o valor fornecido*/
+  border-radius: 4px;  
+  
+/*mostra quando o ponteiro do mouse está sobre um elemento*/  
+  cursor: pointer;  
+  
+  font-weight: bold;             /*negrito*/
+}
+
+ /*configuração design responsivo, usada para calcular 
+  largura(width) e altura (height) do elemento o Box Model*/	
+* {
+  box-sizing: border-box;           					
+																
+}
+
+ /*elementos pai / configuração design responsivo, com flex box*/
+.flex-container {			
+  display: flex;
+  
+  /*força a quebra de linha dos elementos conforme reduz o espaço da tela*/
+  flex-wrap: wrap; 
+  
+  -webkit-align-items: center;
+  align-items: center;			
+
+ /* é empregada para alinhar os elementos ao longo do eixo principal, cuja direção 
+	( row ou column ) é definida a partir da propriedade flex-direction*/
+  -webkit-justify-content: center;  
+
+ /* justify-content: center; Alinha os itens ao centro do container.*/
+  justify-content: center;	            
+													
+}
+
+/*elementos filhos / configuração design responsivo*/
+
+.flex-item-left {				
+		
+  padding: 50px;
+  flex: 50%;
+  
+  /*Cria um espaçamento entre os elementos.*/
+  justify-content: space-around;      
+ 
+}
+
+ /*elementos filhos / configuração design responsivo*/
+
+.flex-item-right {			
+  
+  padding: 50px;
+  flex: 50%;
+}
+
+	/*configura a ordem do container*/
+.ordem1{                   
+	order:2;
+}
+
+.ordem2{
+	order:1;
+}
+
+/*Media query CSS 3, que permite a renderização de 
+	conteúdo para se adaptar a diferentes condições, 
+	como a resolução da tela. Minimo 800 pixels, 
+	layout que era em coluna ao lado, 
+	fica um embaixo do outro*/
+
+@media (max-width: 800px) {                	
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+  /*configura a ordem do container que estava revertidos,
+	volta a ordem corretar para se adequar ao design responsivo
+	na tela menor */	
+  
+  .ordem1{                 
+	  order:1;  			 
+  }
+  .ordem2{
+	  order:2
+  }
+}
+
